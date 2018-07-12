@@ -1,12 +1,14 @@
 ﻿using System;
+using RunningApp.CLI;
 
-namespace ConsoleApp4
+namespace RunningApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        }
+			MainCLI main = new MainCLI();
+			main.Menu();
+		}
     }
 }
