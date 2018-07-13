@@ -11,11 +11,11 @@ namespace RunningApp.CLI
 		{
 			while (true)
 			{
+				Console.Clear();
 				Console.WriteLine("Please choose one of the following options: ");
 				Console.WriteLine("[1] Compute the per mile average time for your most recent run");
 				Console.WriteLine("[2] Determine the per mile average time you will need to hit your goal time for a specific race");
 				Console.WriteLine("[Q] Quit");
-				Console.WriteLine();
 				string mainMenuOption = Console.ReadLine();
 
 				switch (mainMenuOption)
@@ -34,7 +34,7 @@ namespace RunningApp.CLI
 						}
 					case "Q":
 						{
-							break;
+							return;
 						}
 				}
 
