@@ -18,17 +18,17 @@ namespace RunningApp.Services
 				int runTimeSeconds = int.Parse(Console.ReadLine());
 
 				int totalTimeInSeconds = MinutesToSeconds(runTimeMinutes) + runTimeSeconds;
-				double[] timePerMile = MileAverage(totalTimeInSeconds, runDistance);
+				double[] timePerMile = PerMileAverage(totalTimeInSeconds, runDistance);
 
 
 				Console.WriteLine($"You averaged {timePerMile[0]} minutes and {timePerMile[1]} seconds per mile");
 			}
 		}
 
-		private double[] MileAverage(int totalTimeInSeconds, double runDistance)
+		public double[] PerMileAverage(int totalTimeInSeconds, double runDistance)
 		{
 			double secondsPerMile = totalTimeInSeconds / runDistance;
-			double minutesPerMile = totalTimeInSeconds / 60;
+			double minutesPerMile = secondsPerMile / 60;
 			double extraSecondsPerMile = totalTimeInSeconds % 60;
 			double[] AverageMileTime = new double[]
 				{ minutesPerMile, extraSecondsPerMile };

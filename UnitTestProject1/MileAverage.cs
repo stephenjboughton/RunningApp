@@ -10,7 +10,7 @@ namespace UnitTestProject1
 		[TestMethod]
 		public void MileAverageTest()
 		{
-			MainCLI main = new MainCLI;
+			MainCLI main = new MainCLI();
 
 		}
 	}
